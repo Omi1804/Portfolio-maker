@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
-  
-  const [activeLink, setActiveLink] = useState('/');
-
+  const [activeLink, setActiveLink] = useState("/");
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
@@ -17,8 +15,8 @@ function Navbar() {
         <li className="nav-item">
           <Link
             to="/"
-            className={`nav-links ${activeLink === '/' ? 'active' : ''}`}
-            onClick={() => handleLinkClick('/')}
+            className={`nav-links ${activeLink === "/" ? "active" : ""}`}
+            onClick={() => handleLinkClick("/")}
           >
             Home
           </Link>
@@ -27,8 +25,8 @@ function Navbar() {
         <li className="nav-item">
           <Link
             to="/skills"
-            className={`nav-links ${activeLink === '/skills' ? 'active' : ''}`}
-            onClick={() => handleLinkClick('/skills')}
+            className={`nav-links ${activeLink === "/skills" ? "active" : ""}`}
+            onClick={() => handleLinkClick("/skills")}
           >
             About
           </Link>
@@ -37,8 +35,10 @@ function Navbar() {
         <li className="nav-item">
           <Link
             to="/projects"
-            className={`nav-links ${activeLink === '/projects' ? 'active' : ''}`}
-            onClick={() => handleLinkClick('/projects')}
+            className={`nav-links ${
+              activeLink === "/projects" ? "active" : ""
+            }`}
+            onClick={() => handleLinkClick("/projects")}
           >
             Portfolio
           </Link>
@@ -47,8 +47,8 @@ function Navbar() {
         <li className="nav-item">
           <Link
             to="/contact"
-            className={`nav-links ${activeLink === '/contact' ? 'active' : ''}`}
-            onClick={() => handleLinkClick('/contact')}
+            className={`nav-links ${activeLink === "/contact" ? "active" : ""}`}
+            onClick={() => handleLinkClick("/contact")}
           >
             Contact Me
           </Link>
